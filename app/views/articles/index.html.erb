@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <h2>Our Articles</h2>
+      <ul>
+        <% @articles.each do |article| %>
+        <li><%= link_to article.title, article_path(article) %></li>
+        <% end %>
+      </ul>
+      <%= link_to 'Add an article', new_article_path %>
+    </div>
+  </div>
+</div>
+
